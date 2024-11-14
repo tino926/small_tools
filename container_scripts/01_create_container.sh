@@ -12,6 +12,7 @@ fi
 
 echo "Container '$CONTAINER_NAME' does not exist. Creating and starting the container..."
 docker run -it -p 1922:22 --privileged \
+-v /share/CACHEDEV1_DATA/homes/admin/container_storage/root:/root 
 -v /share/CACHEDEV1_DATA/homes/admin/container_storage:/mount \
 -e LANG=C.UTF-8 \
 --name $CONTAINER_NAME ubuntu:22.04 \
